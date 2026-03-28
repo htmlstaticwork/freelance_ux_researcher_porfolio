@@ -1,0 +1,80 @@
+/* =========================================
+   RTL SUPPORT STYLES
+   ========================================= */
+
+[dir="rtl"] body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Inter', 'Arial', sans-serif;
+}
+
+[dir="rtl"] .nav-list {
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .hero-container,
+[dir="rtl"] .about-container,
+[dir="rtl"] .grid,
+[dir="rtl"] .contact-container,
+[dir="rtl"] .footer-container {
+    text-align: right;
+}
+
+[dir="rtl"] .hero-btns {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+[dir="rtl"] .strength-item {
+    flex-direction: row;
+    gap: 20px;
+}
+
+[dir="rtl"] .experience-card {
+    right: auto;
+    left: 20px;
+}
+
+[dir="rtl"] .case-meta div strong {
+    margin-left: 5px;
+    margin-right: 0;
+}
+
+[dir="rtl"] .case-link i {
+    transform: rotate(180deg);
+}
+
+[dir="rtl"] .testimonial-card {
+    border-left: none;
+    border-right: 4px solid var(--accent-color);
+}
+
+[dir="rtl"] .contact-item i {
+    order: 1;
+}
+
+[dir="rtl"] .contact-item span {
+    order: 2;
+}
+
+[dir="rtl"] .step-num {
+    right: auto;
+    left: -5px;
+}
+
+[dir="rtl"] .method-list li i {
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+/* Mirroring the mobile menu */
+@media screen and (max-width: 768px) {
+    [dir="rtl"] .nav {
+        right: auto;
+        left: -100%;
+    }
+    
+    [dir="rtl"] .nav.active {
+        left: 0;
+    }
+}
