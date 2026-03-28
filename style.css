@@ -1309,6 +1309,12 @@ a:hover {
         padding: 20px;
     }
 
+    .case-content h3,
+    .case-content p,
+    .case-content .case-meta {
+        text-align: left;
+    }
+
     .process-steps,
     .bento-grid,
     .tool-cards-grid {
