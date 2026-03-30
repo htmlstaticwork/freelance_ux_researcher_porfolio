@@ -300,6 +300,14 @@ a:hover {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    background: var(--box-bg);
+    border: 1.5px solid var(--border-color);
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
 }
 
 .nav-close {
@@ -1141,24 +1149,35 @@ a:hover {
 
 .theme-toggle,
 .rtl-toggle {
-    background: none;
-    border: none !important;
+    background: var(--box-bg);
+    border: 1.5px solid var(--border-color) !important;
     outline: none;
     color: var(--dark-text);
     cursor: pointer;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: var(--transition);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.theme-toggle i,
+.rtl-toggle span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .theme-toggle:hover,
-.rtl-toggle:hover {
+.rtl-toggle:hover,
+.nav-toggle:hover {
     color: var(--accent-color);
-    background-color: var(--bg-secondary);
+    border-color: var(--accent-color) !important;
 }
 
 .rtl-toggle span {
@@ -1188,8 +1207,8 @@ a:hover {
     }
 
     .nav-toggle {
-        display: block;
-        color: var(--primary-color);
+        display: flex;
+        color: var(--dark-text);
     }
 
     .header-mobile-actions {
