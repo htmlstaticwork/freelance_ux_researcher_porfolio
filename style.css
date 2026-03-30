@@ -21,6 +21,11 @@
     --hero-bg-right: #14b8a6;
     --hero-text-left: #f8fafc;
     --hero-text-right: #ffffff;
+
+    /* Theme-specific variables */
+    --box-bg: #FFFFFF;
+    --border-color: #e2e8f0;
+    --logo-color: #1E3A8A;
 }
 
 /* Dark Theme Variables */
@@ -30,6 +35,9 @@ body.dark-theme {
     --dark-text: #F8FAFC;
     --muted-text: #94A3B8;
     --white: #F8FAFC;
+    --box-bg: #1E1E1E;
+    --border-color: #334155;
+    --logo-color: #F8FAFC;
 }
 
 
@@ -259,7 +267,7 @@ a:hover {
     font-size: 1.8rem;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
-    color: var(--primary-color);
+    color: var(--logo-color);
 }
 
 .logo span {
@@ -640,6 +648,8 @@ a:hover {
     padding: 30px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     flex-grow: 1;
 }
 
@@ -672,6 +682,7 @@ a:hover {
     padding-top: 20px;
     font-size: 0.85rem;
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .case-meta div {
@@ -681,6 +692,7 @@ a:hover {
 .case-link {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
     color: var(--primary-color);
     font-weight: 600;
@@ -757,7 +769,7 @@ a:hover {
    METHODS & TOOLS SECTION
    ========================================= */
 .bg-light-gray {
-    background-color: #F5F5F5;
+    background-color: var(--bg-secondary);
 }
 
 .tools-container {
@@ -854,8 +866,8 @@ a:hover {
 }
 
 .tool-card {
-    background-color: white;
-    border: 1px solid #e2e8f0;
+    background-color: var(--box-bg);
+    border: 1px solid var(--border-color);
     border-radius: 12px;
     padding: 24px 15px;
     text-align: center;
@@ -928,7 +940,8 @@ a:hover {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 40px;
     border-radius: 16px;
-    border-left: 4px solid var(--accent-color);
+    border-top: 4px solid var(--accent-color);
+    text-align: center;
 }
 
 .testimonial-text {
@@ -939,6 +952,7 @@ a:hover {
 
 .testimonial-author {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 16px;
 }
@@ -988,7 +1002,7 @@ a:hover {
 }
 
 .contact-item i {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
 
 .form-group {
@@ -1065,8 +1079,23 @@ a:hover {
     flex-direction: column;
 }
 
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-links i {
+    width: 18px;
+    height: 18px;
+    color: var(--accent-color);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .footer-bottom {
-    color: #475569;
+    color: var(--muted-text);
     font-size: 0.9rem;
 }
 
@@ -1113,7 +1142,8 @@ a:hover {
 .theme-toggle,
 .rtl-toggle {
     background: none;
-    border: none;
+    border: none !important;
+    outline: none;
     color: var(--dark-text);
     cursor: pointer;
     font-size: 1.25rem;
@@ -1234,6 +1264,10 @@ a:hover {
         padding: 25px;
     }
 
+    .bento-content {
+        justify-content: center;
+    }
+
     .process-steps {
         grid-template-columns: 1fr 1fr;
     }
@@ -1243,6 +1277,19 @@ a:hover {
     .about-container {
         grid-template-columns: 1fr;
         gap: 50px;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-info .section-title,
+    .contact-info p {
+        text-align: center;
+    }
+
+    .contact-item {
+        justify-content: center;
     }
 
     .about-content {
@@ -1276,6 +1323,116 @@ a:hover {
 
     .footer-container {
         grid-template-columns: 1.5fr 1fr;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+
+    .footer-about {
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-links a:hover {
+        padding-left: 0;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .section-title {
+        text-align: center;
+    }
+
+    .bento-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 12px;
+    }
+
+    .tool-card {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .split-hero {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .hero-side {
+        padding: 60px 40px;
+        min-height: auto;
+        flex: none;
+    }
+
+    .hero-left {
+        padding: 60px 40px !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-header-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-tagline {
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .hero-footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-sub-label {
+        text-align: center;
+    }
+
+    .hero-big-title {
+        text-align: center;
+    }
+
+    .hero-sub-description {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-big-title {
+        font-size: clamp(3rem, 10vw, 5rem);
+    }
+
+    .hero-right {
+        flex: none;
+    }
+
+    .hero-single-image {
+        height: auto;
+        min-height: 50vw;
+        max-height: 70vh;
+    }
+
+    .hero-full-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
@@ -1343,20 +1500,25 @@ a:hover {
     }
 
     .case-content {
-        text-align: left;
+        text-align: center;
         padding: 20px;
+        align-items: center;
     }
 
     .case-content h3,
     .case-content p,
     .case-content .case-meta {
-        text-align: left;
+        text-align: center;
     }
 
     .process-steps,
     .bento-grid,
     .tool-cards-grid {
         grid-template-columns: 1fr;
+    }
+
+    .bento-content {
+        justify-content: center;
     }
 
     .bento-card.featured {
@@ -1377,8 +1539,26 @@ a:hover {
         text-align: center;
     }
 
+    .footer-col {
+        text-align: center;
+    }
+
     .footer-about {
         max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .footer-links li {
+        text-align: center;
+    }
+
+    .social-links {
+        align-items: center;
+    }
+
+    .social-links a {
+        justify-content: center;
     }
 }
 
@@ -1406,38 +1586,60 @@ a:hover {
 /* =========================================
    SPLIT HERO RESPONSIVENESS
    ========================================= */
-@media screen and (max-width: 1024px) {
-    .split-hero {
-        flex-direction: column;
-    }
 
-    .hero-side {
-        padding: 80px 40px 60px;
-        min-height: auto;
-    }
-
-    .hero-big-title {
-        font-size: clamp(3rem, 10vw, 5rem);
-    }
-
-    .hero-single-image {
-        height: 500px;
-    }
-}
 
 @media screen and (max-width: 768px) {
+    .split-hero {
+        height: auto;
+    }
+
+    .hero-left {
+        padding: 50px 24px !important;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-header-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-footer-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-sub-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .hero-single-image {
-        height: 400px;
+        height: auto;
+        min-height: 56vw;
+        max-height: 60vh;
+    }
+
+    .hero-full-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .hero-overlay-card {
-        padding: 20px;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
+        padding: 16px;
+        bottom: 16px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        width: 85%;
+        text-align: center;
     }
 
     .hero-overlay-card h3 {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
