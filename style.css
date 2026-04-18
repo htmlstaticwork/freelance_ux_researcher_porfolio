@@ -615,6 +615,37 @@ a:hover {
     font-size: 1.1rem;
 }
 
+/* Case Study Tabs */
+.cases-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 10px 24px;
+    border-radius: 30px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-white);
+    color: var(--dark-text);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn:hover {
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+
+.tab-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
 .cases-grid {
     grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
@@ -803,7 +834,7 @@ a:hover {
 
 .bento-card.featured {
     grid-column: span 2;
-    height: 200px;
+    height: 280px;
 }
 
 .bento-img {
@@ -811,6 +842,11 @@ a:hover {
     height: 100%;
     object-fit: cover;
     transition: transform 0.5s ease;
+}
+
+.bento-card.featured .bento-img {
+    object-fit: cover;
+    object-position: center;
 }
 
 .bento-overlay {

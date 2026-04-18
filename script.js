@@ -110,6 +110,36 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* =========================================
+       CASE STUDY FILTERING
+       ========================================= */
+    const filterButtons = document.querySelectorAll('.tab-btn');
+    const caseCards = document.querySelectorAll('.case-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+
+            const filter = button.getAttribute('data-filter');
+
+            caseCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'flex';
+                    // Trigger reflow for animations if needed
+                    setTimeout(() => {
+                        card.classList.add('active');
+                    }, 50);
+                } else {
+                    card.style.display = 'none';
+                    card.classList.remove('active');
+                }
+            });
+        });
+    });
+
+    /* =========================================
        SCROLL REVEAL ANIMATION
        ========================================= */
     const revealElements = document.querySelectorAll('section, .case-card, .process-step, .strength-item');

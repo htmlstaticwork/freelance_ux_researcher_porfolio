@@ -49,13 +49,13 @@
                     <li><a href="#methodologies" class="nav-link">Methodologies</a></li>
                     <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
-                    <li class="nav-item-mobile"><a href="signup.html" class="btn btn-primary nav-btn-signup">Sign Up</a>
+                    <li class="nav-item-mobile"><a href="#contact" class="btn btn-primary nav-btn-signup">Reach Us</a>
                     </li>
                 </ul>
             </nav>
             <div class="header-actions">
                 <div class="header-cta">
-                    <a href="signup.html" class="btn btn-primary btn-signup">Sign Up</a>
+                    <a href="#contact" class="btn btn-primary btn-signup">Reach Us</a>
                 </div>
             </div>
             <div class="header-mobile-actions">
@@ -123,28 +123,34 @@
                 <p class="about-text">
                     With over 5 years of experience in the UX field, I help startups and established brands
                     understand their users better. I don't just deliver data; I provide actionable insights that
-                    drive product strategy.
+                    drive product strategy through rigorous methodology and empathetic storytelling.
+                </p>
+                <p class="about-text">
+                    My approach is grounded in the belief that every design decision should be backed by evidence. 
+                    I specialize in mixed-methods research, combining qualitative depth with quantitative scale 
+                    to paint a complete picture of the user experience. Whether it's discovering unmet needs 
+                    or validating complex workflows, I'm dedicated to making products more human-centric.
                 </p>
                 <div class="about-strengths grid">
                     <div class="strength-item">
                         <i data-lucide="users" class="strength-icon"></i>
                         <div>
                             <h3>User Interviews</h3>
-                            <p>Uncovering the 'why' behind user behavior.</p>
+                            <p>Uncovering the 'why' behind user behavior through deep-dive conversations.</p>
                         </div>
                     </div>
                     <div class="strength-item">
                         <i data-lucide="search" class="strength-icon"></i>
                         <div>
                             <h3>Usability Testing</h3>
-                            <p>Identifying friction points in your user journey.</p>
+                            <p>Identifying friction points and opportunities in your user journey early on.</p>
                         </div>
                     </div>
                     <div class="strength-item">
                         <i data-lucide="bar-chart-2" class="strength-icon"></i>
                         <div>
                             <h3>Data Analysis</h3>
-                            <p>Translating complex metrics into clear narratives.</p>
+                            <p>Translating complex metrics into clear, actionable narratives for stakeholders.</p>
                         </div>
                     </div>
                 </div>
@@ -160,9 +166,18 @@
                 <p class="section-subtitle">Real-world impact through rigorous user research</p>
             </div>
 
+            <div class="cases-tabs">
+                <button class="tab-btn active" data-filter="all">All Projects</button>
+                <button class="tab-btn" data-filter="healthcare">Healthcare</button>
+                <button class="tab-btn" data-filter="fintech">Fintech</button>
+                <button class="tab-btn" data-filter="ecommerce">E-commerce</button>
+                <button class="tab-btn" data-filter="education">EdTech</button>
+                <button class="tab-btn" data-filter="saas">SaaS</button>
+            </div>
+
             <div class="cases-grid grid">
                 <!-- Case Study 1 -->
-                <article class="case-card">
+                <article class="case-card" data-category="healthcare">
                     <div class="case-img-wrapper">
                         <img src="assets/case1.png" alt="Healthcare App Case Study" class="case-img">
                     </div>
@@ -180,7 +195,7 @@
                 </article>
 
                 <!-- Case Study 2 -->
-                <article class="case-card">
+                <article class="case-card" data-category="fintech">
                     <div class="case-img-wrapper">
                         <img src="assets/case2.png" alt="Fintech Dashboard Case Study" class="case-img">
                     </div>
@@ -198,7 +213,7 @@
                 </article>
 
                 <!-- Case Study 3 -->
-                <article class="case-card">
+                <article class="case-card" data-category="ecommerce">
                     <div class="case-img-wrapper">
                         <img src="assets/case3.png" alt="E-commerce Checkout Case Study" class="case-img">
                     </div>
@@ -210,6 +225,57 @@
                         <div class="case-meta">
                             <div><strong>Method:</strong> Heatmaps, Surveys</div>
                             <div><strong>Impact:</strong> 15% boost in conversion rate</div>
+                        </div>
+                        <a href="#" class="case-link">Read Full Study <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Case Study 4 -->
+                <article class="case-card" data-category="education">
+                    <div class="case-img-wrapper">
+                        <img src="edtech_case_study_1776524937081.png" alt="EdTech Learning App" class="case-img">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">Education</span>
+                        <h3 class="case-title">Enhancing Remote Learning</h3>
+                        <p class="case-description">Improving student engagement and accessibility for a leading EdTech platform.</p>
+                        <div class="case-meta">
+                            <div><strong>Method:</strong> Remote Interviews, Ethnography</div>
+                            <div><strong>Impact:</strong> 30% increase in daily active students</div>
+                        </div>
+                        <a href="#" class="case-link">Read Full Study <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Case Study 5 -->
+                <article class="case-card" data-category="ecommerce">
+                    <div class="case-img-wrapper">
+                        <img src="travel_case_study_1776524975681.png" alt="Travel Booking App" class="case-img">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">Travel</span>
+                        <h3 class="case-title">Simplifying Travel Booking</h3>
+                        <p class="case-description">Reducing friction in the flight and hotel booking process for international travelers.</p>
+                        <div class="case-meta">
+                            <div><strong>Method:</strong> Tree Testing, Diary Studies</div>
+                            <div><strong>Impact:</strong> 20% growth in booking completions</div>
+                        </div>
+                        <a href="#" class="case-link">Read Full Study <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Case Study 6 -->
+                <article class="case-card" data-category="saas">
+                    <div class="case-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800" alt="SaaS Dashboard" class="case-img">
+                    </div>
+                    <div class="case-content">
+                        <span class="case-tag">SaaS</span>
+                        <h3 class="case-title">Scaling Enterprise Analytics</h3>
+                        <p class="case-description">Optimizing a data-heavy SaaS dashboard for enterprise-level business analysts.</p>
+                        <div class="case-meta">
+                            <div><strong>Method:</strong> Expert Reviews, Surveys</div>
+                            <div><strong>Impact:</strong> 50% faster insight generation</div>
                         </div>
                         <a href="#" class="case-link">Read Full Study <i data-lucide="arrow-right"></i></a>
                     </div>
@@ -283,7 +349,7 @@
                 </div>
                 <div class="process-step">
                     <div class="step-img-card">
-                        <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=400"
+                        <img src="iterate_and_refine_ux_1776524446994.png"
                             alt="Iterate & Refine" class="step-img">
                         <span class="step-badge">06</span>
                     </div>
@@ -305,7 +371,7 @@
                 <div class="bento-grid">
                     <!-- Featured Methodology (Span-2) -->
                     <div class="bento-card featured">
-                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=500"
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1200"
                             alt="User Interviews" class="bento-img">
                         <div class="bento-overlay"></div>
                         <div class="bento-content">
